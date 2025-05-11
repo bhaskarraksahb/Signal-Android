@@ -678,6 +678,10 @@ public final class ContactSelectionListFragment extends LoggingFragment {
     listClickListener.onItemClick(new ContactSearchKey.RecipientSearchKey(recipientId, false));
   }
 
+  public String getCursorFilter() {
+    return cursorFilter;
+  }
+
   private class ListClickListener {
     public void onItemClick(ContactSearchKey contact) {
       boolean         isUnknown       = contact instanceof ContactSearchKey.UnknownRecipientKey;
